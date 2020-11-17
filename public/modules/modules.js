@@ -44,6 +44,49 @@ ui.default = `
     </div> 
 `;
 
+ui.myAccount = `
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+<div class="card-header">Create Account</div>
+<div class="card-body">
+  <form>
+    <div class="form-group">
+      <label for="firstName"> First Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+    <label for="lastName"> Last Name</label>
+    <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+  </div>
+  <div class="form-group">
+  <label for="phoneNumber"> Phone Number</label>
+  <input type="number" class="form-control" id="phoneNumber" placeholder="Enter phone number">
+</div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+    <label for="DOB"> Date of Birth</label>
+    <input type="date" class="form-control" id="DOB" placeholder="MM/DD/YYYY">
+  </div>
+  <div class="form-group">
+  <label for="firstName"> First Name</label>
+  <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+</div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-light" onclick="create()">Create account</button>
+        </div>
+      </div>
+  </form>
+</div>
+</div>
+`;
+
 var target     = document.getElementById('target');
 var navigation = document.getElementById('navigation');
 navigation.innerHTML += ui.navigation;
@@ -62,19 +105,13 @@ var loadOfferHousing = function(){
 };
 
 var loadMyAccount = function(){
-    target.innerHTML = ui.transactions;
+    target.innerHTML = ui.myAccount;
 };
 
-var loadBalance = function(){
-    target.innerHTML = ui.balance;
-};
 
 var defaultModule = function(){
     target.innerHTML = ui.default;
 };
 
-var loadAllData = function(){
-    target.innerHTML = ui.allData;
-};
 
 defaultModule();

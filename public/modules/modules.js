@@ -95,44 +95,98 @@ ui.myAccount = `
 </div>
 `;
 
-ui.myAccount = `
+
+ui.offerHousing = `
 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-<div class="card-header">Create Account</div>
+<div class="card-header">Housing Offer</div>
 <div class="card-body">
   <form>
-    <div class="form-group">
-      <label for="firstName"> First Name</label>
-      <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
-    </div>
-    <div class="form-group">
-    <label for="lastName"> Last Name</label>
-    <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+  <div class="form-group">
+    <label for="typeOfAccommodation">Type of Accommodation</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+    <option selected>Select...</option>  
+    <option>Apartment</option>
+      <option>House</option>
+      <option>Hotel</option>
+      <option>Camping</option>
+    </select>
   </div>
   <div class="form-group">
-  <label for="phoneNumber"> Phone Number</label>
-  <input type="number" class="form-control" id="phoneNumber" placeholder="Enter phone number">
-</div>
-    <div class="form-group">
-      <label for="email">Email address</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-    <label for="DOB"> Date of Birth</label>
-    <input type="date" class="form-control" id="DOB" placeholder="MM/DD/YYYY">
+    <label for="livingSituation">Living Situation</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+    <option selected>Select...</option>
+    <option>Private quarters</option>
+      <option>Shared quarters</option>
+      <option>Entire accommodation</option>
+    </select>
   </div>
   <div class="form-group">
-  <label for="firstName"> First Name</label>
-  <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
-</div>
+      <label for="numberOfGuests"> How many guests can you host?</label>
+      <input type="number" class="form-control" id="numberOfGuests" placeholder="Number of guests possible">
+    </div>
     <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password">
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-10">
-          <button type="submit" class="btn btn-light" onclick="create()">Create account</button>
-        </div>
-      </div>
+    <label for="filters"> Filters</label>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Family friendly
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Female friendly
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Female only
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Pet friendly
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Smoking friendly
+      </label>
+    </div>
+  </div>
+
+  <div class="form-row">
+  <label for="lengthOfStay">How long can you host?</label>
+
+  <div class="form-group col-md-6">
+      <input type="number" class="form-control" placeholder="Number">
+    </div>
+    
+    <div class="form-group col-md-6">
+        <select class="form-control" id="units">
+    <option selected>Units...</option>
+    <option>Days</option>
+      <option>Weeks</option>
+      <option>Months</option>
+    </select>  
+    </div>
+    
+    <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-light" onclick="create()">Post housing offer</button>
+    </div>
+
   </form>
 </div>
 </div>
